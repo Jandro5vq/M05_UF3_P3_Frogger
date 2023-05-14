@@ -99,6 +99,7 @@ namespace M05_UF3_P3_Frogger
             {
                 pos.y = Utils.MAP_HEIGHT - 1;
             }
+
             foreach (Lane lane in lanes)
             {
                 if (lane.posY == pos.y)
@@ -106,6 +107,7 @@ namespace M05_UF3_P3_Frogger
                     if (lane.speedPlayer) {
                         pos.x += lane.speedElements;
                     }
+
                     if (pos.x >= Utils.MAP_WIDTH)
                     {
                         pos.x = 0;
@@ -114,6 +116,7 @@ namespace M05_UF3_P3_Frogger
                     {
                         pos.x = Utils.MAP_WIDTH - 1;
                     }
+
                     if (lane.ElementAtPosition(pos) == null)
                     {
                         if (lane.damageBackground)
