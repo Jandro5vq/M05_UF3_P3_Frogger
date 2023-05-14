@@ -76,19 +76,25 @@ namespace M05_UF3_P3_Frogger
 
                 } while (Estado == Utils.GAME_STATE.RUNNING);
 
-                // ====== RESULT ====== 
-                if (Estado == Utils.GAME_STATE.WIN)
+                do
                 {
-                    DrawBitMap(WinString, ConsoleColor.Green);
-                }
-                else if (Estado == Utils.GAME_STATE.LOOSE)
-                {
-                    DrawBitMap(LooseString, ConsoleColor.Red);
-                }
+                    Console.Clear();
 
-                Console.Write("\nPor Alejandro Vazquez");
-                Console.Write("\nQuieres Jugar de nuevo? (si/no): ");
-                response = Console.ReadLine();
+                    // ====== RESULT ====== 
+                    if (Estado == Utils.GAME_STATE.WIN)
+                    {
+                        DrawBitMap(WinString, ConsoleColor.Green);
+                    }
+                    else if (Estado == Utils.GAME_STATE.LOOSE)
+                    {
+                        DrawBitMap(LooseString, ConsoleColor.Red);
+                    }
+
+                    Console.Write("\nPor Alejandro Vazquez");
+                    Console.Write("\nQuieres Jugar de nuevo? (si/no): ");
+                    response = Console.ReadLine();
+
+                } while (response != "si" && response != "no");
 
             } while (response == "si");
             
