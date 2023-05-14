@@ -42,8 +42,10 @@ namespace M05_UF3_P3_Frogger
 
         public const char charCars = '╫';
         public static readonly ConsoleColor[] colorsCars = { ConsoleColor.Cyan, ConsoleColor.Magenta, ConsoleColor.Red, ConsoleColor.Red };
-        public const char charLogs = '=';
+        public const char charLogs = '═';
         public static readonly ConsoleColor[] colorsLogs = { ConsoleColor.DarkYellow, ConsoleColor.Yellow};
+        public const char charGrass = ' ';
+        public static readonly ConsoleColor[] colorsGrass = { ConsoleColor.Green};
 
         public enum GAME_STATE { RUNNING, WIN, LOOSE };
 
